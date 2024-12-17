@@ -4,9 +4,13 @@
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:** Quartus prime
+**SOFTWARE REQUIRED:** 
+
+Quartus prime
 
 **THEORY**
+
+An Encoder is a combinational circuit that performs the reverse operation of decoder . It has maximum of 2^n input lines and 'n' output lines , hence it encodes the information from 2^n output lines
 
 **Encoder 8 To 3**
 
@@ -36,21 +40,54 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+1. Type the program in Quartus software.
+
+2. Compile and run the program.
+
+3. Generate the RTL schematic and save the logic diagram.
+
+4. Create nodes for inputs and outputs to generate the timing diagram.
+
+5. For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
+**Developed by: Tauqir Ahmed S**
+
+**RegisterNumber: 24013512**
+
+**Program:**
+
+module encoder(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+  
+  input y0,y1,y2,y3,y4,y5,y6,y7;
+  
+  output a,b,c;
+  
+  assign a= ( y4 | y5 | y6 | y7);
+  
+  assign b= ( y2 | y3 | y6 | y7);
+  
+  assign c= ( y1 | y3 | y5 | y7);
+
+endmodule
+
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
 
+![Screenshot 2024-12-17 152335](https://github.com/user-attachments/assets/6c34d991-11fe-477d-91be-bec452b2ae45)
+
+
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+
+![Screenshot 2024-12-17 152653](https://github.com/user-attachments/assets/3f21ba7c-e273-44f8-bf25-b41a3eadac80)
+
 
 **RESULTS**
 
+The 8-to-3 encoder was implemented using dataflow modeling in Verilog, and its functionality was successfully validated through simulation. The outputs matched the expected results from the functional table.
 
 
 
